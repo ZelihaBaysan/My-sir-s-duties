@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-/*Çift Fibonacci Sayýlarý
-Fibonacci dizisindeki her yeni terim, önceki iki terimin toplamýyla oluþturulur. 1 ve 2 ile baþladýðýmýzda, ilk 10 terim þu þekildedir: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ... 
-Dört milyonu aþmayan Fibonacci dizisindeki terimleri düþünerek, çift deðerli terimlerin toplamýný bulun.
+/*ï¿½ift Fibonacci Sayï¿½larï¿½
+Fibonacci dizisindeki her yeni terim, ï¿½nceki iki terimin toplamï¿½yla oluï¿½turulur. 1 ve 2 ile baï¿½ladï¿½ï¿½ï¿½mï¿½zda, ilk 10 terim ï¿½u ï¿½ekildedir: 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ... 
+Dï¿½rt milyonu aï¿½mayan Fibonacci dizisindeki terimleri dï¿½ï¿½ï¿½nerek, ï¿½ift deï¿½erli terimlerin toplamï¿½nï¿½ bulun.
 */
 
 int main() {
