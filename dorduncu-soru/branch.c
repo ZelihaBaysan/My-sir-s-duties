@@ -17,7 +17,7 @@ int main()
     int win1 = 0, win2 = 0, oyun = 0;
    
 
-    while (oyun < 10000000)
+    while (oyun < 1000000)
     {
        
         if (mermiKonumu % 2 == 0)
