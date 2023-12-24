@@ -20,8 +20,8 @@ int main()
 	int i = 0;
     for (i; i < simulasyon; i++)
     {
-        while (!(switchh[0] == 0 && switchh[1] == 0 && switchh[2] == 0 &&
-                 switchh[3] == 0 && switchh[4] == 0 && switchh[5] == 0))
+        while (!(switchh[0] == 1 && switchh[1] == 1 && switchh[2] == 1 &&
+                 switchh[3] == 1 && switchh[4] == 1 && switchh[5] == 1))
         {
             int random = generateRandom();
 
