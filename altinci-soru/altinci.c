@@ -1,44 +1,47 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <stdbool.h>
 
-int generateRandom()
-{
-    return rand() % 6;
-}
+bool tum_lambalar_yandi_mi(int lambalar[]);
 
-int main()
-{
+int main() {
+    int max_deneme = 0;
     srand(time(NULL));
+    int oyun_sayisi = 1000000;
+    int i = 0;
 
-    int switchh[6] = {0, 0, 0, 0, 0, 0};
-    int acikSwitch = generateRandom();
-    switchh[acikSwitch] = 1;
-    int sayac = 0;
-    const int simulasyon = 1000000;
-    float sonuc = 0;
-	int i = 0;
-    for (i; i < simulasyon; i++)
-    {
-        while (!(switchh[0] == 1 && switchh[1] == 1 && switchh[2] == 1 &&
-                 switchh[3] == 1 && switchh[4] == 1 && switchh[5] == 1))
-        {
-            int random = generateRandom();
+    for (i = 0; i < oyun_sayisi; i++) {
+        int deneme = 0;
+        int lambalar[6] = {0, 0, 0, 0, 0, 0};
 
-            if (switchh[random] == 1)
-            {
-                switchh[random] = 0;
-            }
-            else
-            {
-                switchh[random] = 1;
+        while (!tum_lambalar_yandi_mi(lambalar)) {
+            int deger = (rand() % 6) + 1;
+
+            if (lambalar[deger - 1] == 1) {
+                lambalar[deger - 1] = 0;
+            } else {
+                lambalar[deger - 1] = 1;
             }
 
-            sayac++;
+            deneme++;
         }
+
+        max_deneme += deneme;
     }
 
-    sonuc =(float)sayac/simulasyon;
-    printf("Ortalama %f seferde 6 lamba da acik olur\n", sonuc);
+    double ortalama_deneme = (double)max_deneme / oyun_sayisi;
+    printf("Ortalama deneme sayisi: %f", ortalama_deneme);
+
     return 0;
+}
+
+bool tum_lambalar_yandi_mi(int lambalar[]) {
+    int i = 0;
+    for (i = 0; i < 6; i++) {
+        if (lambalar[i] == 0) {
+            return false;
+        }
+    }
+    return true;
 }
