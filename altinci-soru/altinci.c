@@ -8,7 +8,7 @@ bool tum_lambalar_yandi_mi(int lambalar[]);
 int main() {
     int max_deneme = 0;
     srand(time(NULL));
-    int oyun_sayisi = 1000000;
+    int oyun_sayisi = 10000000;
     int i = 0;
 
     for (i = 0; i < oyun_sayisi; i++) {
